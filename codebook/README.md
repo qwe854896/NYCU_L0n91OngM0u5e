@@ -16,11 +16,10 @@
   - Black Magic
     - mt19937
     - pbds
-    - Quick Input
+    - IO
     - Bitwise Hack
 - Data Structures
   - Sparse Table
-  - BIT (range update)
   - ST (Lazy Tag)
   - Heavy Light Decomposition
   - Link Cut Tree
@@ -29,13 +28,9 @@
   - LiChao ST
   - zkw
 - Graphs
-  - Shortest Path
-  - Minimum Spanning Tree
   - SCC
   - BCC
   - Tarjan
-  - De Brujin Sequence
-  - Eulerian
 - Flow and Matching
   - Dinic
   - MinCostMaxFlow
@@ -52,9 +47,7 @@
   - Fraction
   - Gaussian Elimination
 - Number Theory
-  - Extended Gcd
   - Miller Rabin
-  - Chinese Remainder Theorem
   - Mobius Inversion
   - Divisors
   - Simplex
@@ -62,7 +55,6 @@
 - Geometry
   - Default
   - Convex Hull
-  - Closet Pair
   - KD tree
 - String
   - KMP
@@ -70,4 +62,5 @@
   - AC Automation
   - Suffix Array
 - DP optimizations
-  - 
+  - Convex Hull
+  - Divide and Conquer
