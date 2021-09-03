@@ -1,7 +1,3 @@
-/**
- * Taken from: http://codeforces.com/blog/entry/18051
- * */
-
 const int MN = 1e5;  // limit for array size
 
 struct seg_tree {

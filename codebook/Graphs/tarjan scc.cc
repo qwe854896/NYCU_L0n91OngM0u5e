@@ -1,5 +1,4 @@
 const int MN = 20002;
-
 struct tarjan_scc {
   int scc[MN], low[MN], d[MN], stacked[MN];
   int ticks, current_scc;

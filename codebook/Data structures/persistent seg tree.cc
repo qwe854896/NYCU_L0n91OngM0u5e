@@ -1,17 +1,12 @@
 /**
- *  Problems:
- *    http://codeforces.com/contest/813/problem/E
- *
  *  Important:
- *  When using lazy propagation remembert to create new
+ *  When using lazy propagation remember to create new
  *  versions for each push_down operation!!!
  * */
-
 struct node {
   node *l, *r;
   long long acc;
   int flip;
-
   node (int x) : l(NULL), r(NULL), acc(x), flip(0) {}
   node () : l(NULL), r(NULL), acc(0), flip(0) {}
 };

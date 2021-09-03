@@ -5,7 +5,7 @@ struct TreeDecomposition {
   int p[MAXN]; // parent id
   int r[MAXN]; // chain root id
   int t[MAXN]; // index used in segtree/bit/...
-  int d[MAXN]; // depht
+  int d[MAXN]; // depth
   int ts;
 
   void dfs(int v, int f) {
