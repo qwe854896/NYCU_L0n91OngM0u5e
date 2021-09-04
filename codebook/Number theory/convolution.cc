@@ -1,9 +1,5 @@
-typedef long long int LL;
-typedef pair<LL, LL> PLL;
-
-inline bool is_pow2(LL x) {
-  return (x & (x-1)) == 0;
-}
+//check x is 2^a
+inline bool is_pow2(LL x);
 
 inline int ceil_log2(LL x) {
   int ans = 0;
