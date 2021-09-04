@@ -2,7 +2,6 @@ struct Graph {
   vector<vector<Edge>> g;
   vector<int> vi, low, d, pi, is_b;
   int bridges_computed;
-
   int ticks, edges;
 
   Graph(int n, int m) {
