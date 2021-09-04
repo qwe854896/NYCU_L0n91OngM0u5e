@@ -1,6 +1,3 @@
-typedef long long int LL;
-typedef pair<LL, LL> PLL;
-
 /* The following vector of pairs contains pairs (prime, generator)
  * where the prime has an Nth root of unity for N being a power of two.
  * The generator is a number g s.t g^(p-1)=1 (mod p)
@@ -9,21 +6,11 @@ vector<PLL> nth_roots_unity {
   {1224736769,330732430},{1711276033,927759239},{167772161,167489322},
    {469762049,343261969},{754974721,643797295},{1107296257,883865065}};
 
-PLL ext_euclid(LL a, LL b) {
-  if (b == 0)
-    return make_pair(1,0);
-  pair<LL,LL> rc = ext_euclid(b, a % b);
-  return make_pair(rc.second, rc.first - (a / b) * rc.second);
-}
+// return (x, y) : ax + by = gcd(a, b)
+PLL ext_euclid(LL a, LL b);
 
 //returns -1 if there is no unique modular inverse
-LL mod_inv(LL x, LL modulo) {
-  PLL p = ext_euclid(x, modulo);
-  if ( (p.first * x + p.second * modulo) != 1 )
-    return -1;
-  return (p.first+modulo) % modulo;
-}
-
+LL mod_inv(LL x, LL modulo);
 
 //Number theory fft. The size of a must be a power of 2
 void ntfft(vector<LL> &a, int dir, const PLL &root_unity) {
