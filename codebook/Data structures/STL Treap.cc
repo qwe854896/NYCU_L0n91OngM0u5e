@@ -1,6 +1,21 @@
+#include <iostream>
 #include <ext/rope> //header with rope
 using namespace std;
 using namespace __gnu_cxx; //namespace with rope and some additional stuff
+
+/*
+#include <ext/rope> //header with rope
+using namespace __gnu_cxx; //namespace with rope and some additional stuff
+
+rope<int> x, y; int s, len;
+
+x.size(),    x.push_back(s),    x.substr(pos, s)    x[i] 一般功能
+
+x.insert(pos, s or y)
+x.erase(pos, len)  刪除[pos, pos + len)
+x.replace(pos, s) 將x[pos] 改成 s
+x.copy(pos, len, y) 複製[pos, pos + len) 到 y
+*/
 int main()
 {
     ios_base::sync_with_stdio(false);
