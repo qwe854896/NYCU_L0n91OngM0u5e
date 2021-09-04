@@ -4,8 +4,6 @@
  *  test: http://lightoj.com/volume_showproblem.php?problem=1251
  **/
 
-#include<bits/stdc++.h>
-using namespace std;
 #define MAX 100000
 #define endl '\n'
 
