@@ -7,15 +7,8 @@
  * test: icpc live archive, 6886 - Golf Bot
  * */
 
-
-using namespace std;
-#include<bits/stdc++.h>
-#define D(x) cout << #x " = " << (x) << endl
-#define endl '\n'
-
 const int MN = 262144 << 1;
 int d[MN + 10], d2[MN + 10];
-
 
 const double PI = acos(-1.0);
 
