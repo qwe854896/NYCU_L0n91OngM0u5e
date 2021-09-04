@@ -1,6 +1,4 @@
-
 // Computes x which a ^ x = b mod n.
-
 long long d_log(long long a, long long b, long long n) {
   long long m = ceil(sqrt(n));
   long long aj = 1;
