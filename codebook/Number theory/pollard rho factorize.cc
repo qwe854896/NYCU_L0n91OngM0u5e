@@ -17,7 +17,6 @@ long long pollard_rho(long long n) {
   return 1;
 }
 
-
 // Returns a list with the prime divisors of n
 vector<long long> factorize(long long n) {
   vector<long long> ans;
