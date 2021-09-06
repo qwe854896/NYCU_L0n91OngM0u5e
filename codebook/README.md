@@ -7,7 +7,7 @@
 5. 變數取名以**看得懂**為主，除非是黑箱內的變數
 
 ## 預定更新
-- Algorithms
+- Else
   - Mo's algorithm
   - Mo's algorithm(with modification)
   - Mo's algorithm on Tree
