@@ -1,4 +1,3 @@
-// RMQ.
 const int MN = 100000 + 10; // Max number of elements
 const int ML = 18; // ceil(log2(MN));
 
@@ -6,14 +5,6 @@ struct st {
   int data[MN];
   int M[MN][ML];
   int n;
-
-  void init(const vector<int> &d) {
-    n = d.size();
-    for (int i = 0; i < n; ++i)
-      data[i] = d[i];
-
-    build();
-  }
 
   void build() {
     for (int i = 0; i < n; ++i)

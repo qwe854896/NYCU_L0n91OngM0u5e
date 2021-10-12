@@ -43,5 +43,3 @@ vector<LL> convolve(const vector<LL> &a, const vector<LL> &b, int nroots_unity =
   }
   return ans;
 }
-
-

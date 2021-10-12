@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "rope": "cpp"
+        "rope": "cpp",
+        "chrono": "cpp",
+        "cmath": "cpp",
+        "string": "cpp"
     }
 }

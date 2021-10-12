@@ -13,7 +13,7 @@ struct NTT {
     for (int i = 1; i < MAXN; ++i) w[i] = w[i - 1] * dw % P;
   }
   void bitrev(LL *a, int n) {
-    for (int i = 1, j = 0; i < n; i++) {
+    for (int i = 1, j = 0; i < n; ++i) {
 			for (int l = n >> 1; (j ^= l) < l; l >>= 1);
 			if (i > j) swap(a[i], a[j]);
 		}

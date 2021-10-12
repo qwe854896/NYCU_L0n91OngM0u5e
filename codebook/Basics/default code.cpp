@@ -25,9 +25,8 @@ using pii = pair <int, int>;
 using pll = pair <ll , ll >;
 
 const int MOD = 1000000007;
-const int INF = INT_MAX;
+const ll INF = 0x7f7f7f7f7f7f7f7f; // 922337203685477580;
 
 signed main () {
 //	IOS;
-	return 0;
 }
