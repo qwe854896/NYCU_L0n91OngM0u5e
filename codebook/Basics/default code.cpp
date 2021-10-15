@@ -3,11 +3,14 @@ using namespace std;
 
 #define endl '\n'
 #define pb emplace_back
-#define X first
-#define Y second
-#define SZ(a) ((int)a.size())
-#define ALL(x) x.begin(), x.end()
-#define CLR(x, y) memset(x, y, sizeof(x))
+#define ins insert
+#define x first
+#define y second
+#define lb lower_bound
+#define ub upper_bound
+#define sz(a) ((int)a.size())
+#define all(x) x.begin(), x.end()
+#define clr(x, y) memset(x, y, sizeof(x))
 #define IOS ios::sync_with_stdio(false); cin.tie(nullptr)
 #define rep(i, begin, end) for (__typeof(end) i = (begin) - ((begin) > (end)); i != (end) - ((begin) > (end)); i += (begin > end ? -1 : 1))
 #define debug(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); err(_it, args); }

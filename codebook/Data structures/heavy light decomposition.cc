@@ -46,7 +46,7 @@ struct HeavyLineDCP {
     st.build(1, 1, n);
   }
   void upd(int s, int x) {
-    st.upd(1, 1, n, in[s], x);
+    st.upd(1, 1, n, in[s], x); // upd x on in[s]
   }
   int query(int a, int b) {
     int ans = 0;
