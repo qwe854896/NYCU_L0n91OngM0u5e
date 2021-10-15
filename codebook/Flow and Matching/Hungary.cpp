@@ -24,7 +24,7 @@ int hungary() {
     rnd = 0;
     // iterate first set
     int ans = 0;
-    for (int i - 1; i <= u; ++i) {
+    for (int i = 1; i <= u; ++i) {
         if (match[i] == 0) {
             ++rnd;
             if (dfs(i)) ++ans;
