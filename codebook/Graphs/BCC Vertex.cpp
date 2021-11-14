@@ -2,7 +2,7 @@ vector<int> G[N]; // 1-base
 vector<int> nG[N], bcc[N];
 int low[N], dfn[N], Time;
 int bcc_id[N], bcc_cnt; // 1-base
-bool is_cut[N]; // whether is av
+bool is_cut[N]; // whether is AP
 bool cir[N];
 int st[N], top;
 
@@ -20,7 +20,7 @@ void dfs(int u, int pa = -1) {
         int t;
         do {
           bcc_id[t = st[--top]] = bcc_cnt;
-          bcc[bcc_cnt].push_back(t);
+          bcc[bcc_cnt].pb(t);
         } while (t != v);
         bcc_id[u] = bcc_cnt;
         bcc[bcc_cnt].pb(u);

@@ -1,3 +1,6 @@
+// Find max flow with min cost
+// cost comes from every edge
+// c_i per flow
 struct MCMF { // 0-base
   struct edge {
     ll from, to, cap, flow, cost, rev;

@@ -9,6 +9,7 @@ ll pollard_rho(ll n){
     if(res!=0&&res!=n) return res;
   }
 }
+// Factorize n
 vector<ll> factorize(ll n) {
   vector<ll> ans;
   if (n == 1)

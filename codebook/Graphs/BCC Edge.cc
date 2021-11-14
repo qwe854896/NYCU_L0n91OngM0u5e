@@ -1,5 +1,6 @@
 struct Graph {
   vector<vector<Edge>> g;
+  // vis; low; time; parent; is_bridge; 
   vector<int> vi, low, d, pi, is_b;
   int bridges_computed;
   int ticks, edges;

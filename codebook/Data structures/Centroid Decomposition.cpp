@@ -12,6 +12,10 @@ struct Cent_Dec { // 1-base
   void add_edge(int a, int b, int w) {
     G[a].pb(pll(b, w)), G[b].pb(pll(a, w));
   }
+  /* subtree u with father f,
+  mx: max size of subtree, c, the centroid
+  num: total number of vertices in tree
+  */
   void get_cent(
     int u, int f, int &mx, int &c, int num) {
     int mxsz = 0;

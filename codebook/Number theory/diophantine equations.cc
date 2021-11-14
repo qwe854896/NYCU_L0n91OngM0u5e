@@ -1,20 +1,7 @@
-ll gcd(ll a, ll b, ll &x, ll &y) {
-  if (a == 0)
-    return x = 0, y = 1, b;
-  
-  ll x1, y1;
-  ll d = gcd(b % a, a, x1, y1);
-  x = y1 - (b / a) * x1;
-  y = x1;
-  return d;
-}
-
 bool find_any_solution(ll a, ll b, ll c, ll &x0,
     ll &y0, ll &g) {
-  g = gcd(abs(a), abs(b), x0, y0);
-  if (c % g) 
-    return false;
-
+  extgcd(abs(a), abs(b), x0, y0, g);
+  if (c % g) return false;
   x0 *= c / g;
   y0 *= c / g;
   if (a < 0) x0 = -x0;

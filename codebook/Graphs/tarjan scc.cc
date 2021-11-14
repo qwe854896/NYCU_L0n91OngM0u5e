@@ -1,7 +1,8 @@
 const int MN = 20002;
 struct tarjan_scc {
+  /* scc for each vertex; low; dep; is stk; */
   int scc[MN], low[MN], d[MN], stacked[MN];
-  int ticks, current_scc;
+  int ticks, current_scc; // some id
   deque<int> s; // used as stack.
 
   tarjan_scc() {}
@@ -18,7 +19,7 @@ struct tarjan_scc {
     d[u] = low[u] = ticks++;
     s.push_back(u);
     stacked[u] = true;
-    for (int i = 0; i < g[u].size(); ++i) {
+    for (int v : g[i]) {
       int v = g[u][i];
       if (d[v] == -1)
         compute(g, v);
