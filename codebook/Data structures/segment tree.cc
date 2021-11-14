@@ -117,8 +117,6 @@ struct seg_tree {
     set(node << 1 | 1, mid + 1, e, from, to, v);
   }
 
-
-
   int query(int node, int b, int e, int pos) {
     propagate(node, b, e);
 

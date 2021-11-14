@@ -8,9 +8,6 @@
 
 ## 預定更新
 - Basics
-  - Black Magic
-    - mt19937
-    - Bitwise Hack
 - Data Structures
   - Sparse Table
   - Segment Tree (Lazy Tag)

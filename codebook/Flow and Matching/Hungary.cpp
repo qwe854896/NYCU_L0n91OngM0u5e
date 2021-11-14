@@ -1,10 +1,10 @@
 /* Find the maximum number of matchings in bipartite */
-int match[V], vis[V], rnd;
+int match[V], vis[V], rnd; // 1-index
 vi g[V];
 bool dfs(int id) {
     vis[id] = rnd;
     for (auto &x : g[id]) {
-        if (match[x] == 0) {
+        if (match[x] == -1) {
             match[id] = x;
             match[x] = id;
             return true;
@@ -20,12 +20,12 @@ bool dfs(int id) {
     return false;
 }
 int hungary() {
-    for(int i = 0; i <= n; ++i) vis[i] = match[i] = -1;
+    for(int i = 1; i <= n; ++i) vis[i] = match[i] = -1;
     rnd = 0;
     // iterate first set
     int ans = 0;
-    for (int i = 1; i <= u; ++i) {
-        if (match[i] == 0) {
+    for (int i = 1; i <= n; ++i) {
+        if (match[i] == -1) {
             ++rnd;
             if (dfs(i)) ++ans;
         }

@@ -101,7 +101,6 @@ private:
     return res;
   }
 
-
   vector<Node> nodes;
   int nNodes;
   vector<String> strings;

@@ -1,3 +1,4 @@
+// 1 second around 10^12
 int64_t PrimeCount(int64_t n) {
   if (n <= 1) return 0;
   const int v = sqrt(n);

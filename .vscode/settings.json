@@ -3,6 +3,8 @@
         "rope": "cpp",
         "chrono": "cpp",
         "cmath": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "*.tcc": "cpp",
+        "list": "cpp"
     }
 }
