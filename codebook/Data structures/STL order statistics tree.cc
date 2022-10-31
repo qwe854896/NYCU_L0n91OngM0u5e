@@ -7,9 +7,9 @@ using namespace std;
  
 typedef
 tree<
-  pair<int,int>,
+  pair<int,int>, // set type
   null_type,
-  less<pair<int,int>>,
+  less<pair<int,int>>, // set type cmp
   rb_tree_tag,
   tree_order_statistics_node_update>
 ordered_set;
