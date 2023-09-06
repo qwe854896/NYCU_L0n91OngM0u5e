@@ -1,4 +1,5 @@
 ## 注意事項
+0. Use `notebook-generator ./ -a "NYCU_L0n91OngM0u5e" -p a4paper --image ./cover.jpg -s 8 -c 3` to generate the codebook.
 1. 標記 0-index or 1-index
 2. 以**容易刻錯**或**coding複雜度**為放入優先
 3. **黑魔法**次之
