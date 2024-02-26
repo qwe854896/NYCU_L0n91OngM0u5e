@@ -79,7 +79,7 @@ struct bigN:vector<ll>{
     for(size_t i=0;i<b.size();++i)res[i]-=b[i];
     return res.carry(),res.trim(),res;
   }
-  bigN operator*(const bigN &b)const{
+  bigN operator*(const bigN &b)const{ // O(n^2)
     bigN res;
     res.negative=negative!=b.negative;
     res.resize(size()+b.size());
@@ -91,7 +91,7 @@ struct bigN:vector<ll>{
         }
     return res.trim(),res;
   }
-  bigN operator/(const bigN &b)const{
+  bigN operator/(const bigN &b)const{ //O(n^2)
     int norm=base/(b.back()+1);
     bigN x=abs()*norm;
     bigN y=b.abs()*norm;

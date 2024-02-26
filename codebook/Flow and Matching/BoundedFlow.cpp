@@ -1,4 +1,4 @@
-struct BoundedFlow { // 0-base
+struct BoundedFlow { // 0-base // O(F * E * log(V))
   struct edge {
     int to, cap, flow, rev;
   };

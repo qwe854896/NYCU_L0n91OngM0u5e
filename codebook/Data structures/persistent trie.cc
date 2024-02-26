@@ -44,9 +44,7 @@ int sum_smaller(pnode_bin cur, int key, int id = MD) {
   return ans;
 }
 
-
-// Persistent trie for strings.
-const int MAX_CHILD = 26;
+const int MAX_CHILD = 26; // Persistent trie for strings.
 struct node {
   node *child[MAX_CHILD];
   int val;

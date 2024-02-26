@@ -1,4 +1,5 @@
-struct Graph { // 0-base (Perfect Match), n is even
+// Finds a perfect matching of minimum weight in a graph
+struct Graph { // 0-base (Perfect Match) // n is even // O(V^3)
   int n, match[N], onstk[N], stk[N], tp;
   ll edge[N][N], dis[N];
   void init(int _n) {

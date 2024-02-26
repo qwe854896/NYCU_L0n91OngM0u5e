@@ -1,6 +1,3 @@
-using namespace std;
-#include<bits/stdc++.h>
-
 vector<int> compute_z(const string &s){
   int n = s.size();
   vector<int> z(n,0);
@@ -23,7 +20,6 @@ vector<int> compute_z(const string &s){
   }
   return z;
 }
-
 int main(){
 
   //string line;cin>>line;
@@ -34,9 +30,6 @@ int main(){
     if(i)cout<<" ";
     cout<<z[i];
   }
-  cout<<endl;
-
-  // must print "0 0 0 4 0 0 1"
-
+  cout<<endl;// must print "0 0 0 4 0 0 1"
   return 0;
 }

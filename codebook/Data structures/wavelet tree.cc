@@ -1,11 +1,4 @@
-/*
-不是很確定要幹嘛，下面的題目敘述 :
-N個數列，Q筆詢問，每次詢問找到區間[0,i]的第k小的數x
-並且找到[0,N-1]中第l個x的位置
-this can be tested in the problem: http://www.spoj.com/problems/ILKQUERY/
-*/
-
-struct wavelet {
+struct wavelet { // O(n log n) build, O(log n) query
   vector<int> values, ori;
   vector<int> map_left, map_right;
   int l, r, m;

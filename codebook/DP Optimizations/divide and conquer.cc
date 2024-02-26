@@ -1,7 +1,6 @@
 /*
  * recurrence:
  *    dp[k][i] = min dp[k-1][j] + c[i][j - 1], for all j > i;
- *
  * "comp" computes dp[k][i] for all i in O(n log n) (k is fixed)
 */
 

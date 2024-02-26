@@ -1,4 +1,4 @@
-struct SCC {
+struct SCC { // O(V+E)
   int n, m;
   vi g[V], gt[V], gg[V], v;
 

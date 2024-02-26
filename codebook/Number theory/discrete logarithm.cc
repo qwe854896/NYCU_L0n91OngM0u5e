@@ -1,5 +1,5 @@
 // Computes x which a ^ x = b mod n.
-ll d_log(ll a, ll b, ll n) {
+ll d_log(ll a, ll b, ll n) { // O(sqrt(n)logn)
   ll m = ceil(sqrt(n));
   ll aj = 1;
   map<ll, ll> M;

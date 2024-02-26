@@ -1,7 +1,3 @@
-/**
-problems: 
-    - https://codeforces.com/gym/101161 problem E
-*/
 void flat(vector<vector<edge>> &g, vector<int> &a,
     vector<int> &le, vector<int> &ri, vector<int> &cost,
     int node, int pi, int &ts, int w) {

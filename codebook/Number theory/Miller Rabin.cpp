@@ -3,7 +3,7 @@
 // n < 3,474,749,660,383  6 : primes <= 13
 // n < 2^64             7 : 
 // 2, 325, 9375, 28178, 450775, 9780504, 1795265022
-bool Miller_Rabin(ll a, ll n) {
+bool Miller_Rabin(ll a, ll n) { // O(logn)
   if((a = a % n) == 0) return 1;
   if((n & 1) ^ 1) return n == 2;
   ll tmp = (n - 1) / ((n - 1) & (1 - n));

@@ -1,7 +1,7 @@
 const int MN = 100000 + 10; // Max number of elements
 const int ML = 18; // ceil(log2(MN));
 
-struct st {
+struct st { // O(nlogn) build, O(1) query
   int data[MN];
   int M[MN][ML];
   int n;

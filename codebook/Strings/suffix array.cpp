@@ -1,6 +1,5 @@
 /**
  * O (n log^2 (n))
- * See http://web.stanford.edu/class/cs97si/suffix-array.pdf for reference
  * */
 
 struct entry{

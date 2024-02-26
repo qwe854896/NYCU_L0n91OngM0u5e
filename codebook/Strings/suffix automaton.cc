@@ -6,7 +6,6 @@
  * states.
  *
  * The overall complexity is O(n)
- * can be tested here: https://www.urionlinejudge.com.br/judge/en/problems/view/1530
  * */
 
 struct state {

@@ -1,5 +1,3 @@
-using namespace std;
-#include<bits/stdc++.h>
 #define D(x) cout<<x<<endl;
 
 typedef int T;
@@ -10,7 +8,7 @@ struct node{
   node (T k) : key(k), left(0), right(0), parent(0) {}
 };
 
-struct splay_tree{
+struct splay_tree{ // BST, O(log n) for insert, find
 
 
   node *root;

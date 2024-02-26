@@ -1,6 +1,3 @@
-// taken from : https://github.com/lbv/pc-code/blob/master/solved/c-e/diablo/diablo.cpp
-// this is very fast as well : https://github.com/lbv/pc-code/blob/master/code/input.cpp
-
 typedef unsigned int u32;
 #define BUF 524288
 struct Reader {

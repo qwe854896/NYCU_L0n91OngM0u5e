@@ -1,5 +1,5 @@
 bool find_any_solution(ll a, ll b, ll c, ll &x0,
-    ll &y0, ll &g) {
+    ll &y0, ll &g) { // ax + by = c // O(logn)
   extgcd(abs(a), abs(b), x0, y0, g);
   if (c % g) return false;
   x0 *= c / g;

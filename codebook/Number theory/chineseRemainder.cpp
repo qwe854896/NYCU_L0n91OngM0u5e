@@ -1,4 +1,4 @@
-ll solve(ll x1, ll m1, ll x2, ll m2) {
+ll solve(ll x1, ll m1, ll x2, ll m2) { // x = x1 mod m1, x = x2 mod m2 // O(logn)
   ll p, q, g;
   extgcd(m1, m2, p, q, g);
   if((x2 - x1) % g) return -1;// no sol

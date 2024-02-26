@@ -14,11 +14,8 @@ struct Query {
 
 struct DS {
   DS() : {}
-
   void Insert(int x) {}
-
   void Erase(int x) {}
-
   long long Query() {}
 };
 

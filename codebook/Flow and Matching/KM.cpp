@@ -1,24 +1,24 @@
-/* Find the maximum weight of matchings in bipartite */
-struct KM
+// Find the maximum weight of matchings in bipartite
+struct KM // 0-base // O(V^3)
 {
     int w[V][V], hl[V], hr[V], slk[V];
     int fl[V], fr[V], pre[V], q[V], ql, qr, n;
     bool vl[V], vr[V];
-    void init(int _n) {
+    void init(int _n) { // O(n^2)
         n = _n;
         for (int i = 0; i < n; ++i) 
             for (int j = 0; j < n; ++j)
                 w[i][j] = -INF;
     }
-    void add_edge(int a, int b, int _w) {
+    void add_edge(int a, int b, int _w) { // O(1)
         w[a][b] = _w;
     }
-    bool chk(int x) {
+    bool chk(int x) { // O(n)
         if (vl[x] = 1, ~fl[x]) return vr[q[qr++] = fl[x]] = 1;
         while (~x) swap(x, fr[fl[x] = pre[x]]);
         return 0;
     }
-    void bfs(int s) {
+    void bfs(int s) { // O(n^2)
         fill(slk, slk + n, INF);
         fill(vl,vl+n,0), fill(vr,vr+n,0);
         ql=qr=0, q[qr++] = s, vr[s] = 1;
@@ -44,7 +44,7 @@ struct KM
                 if (!vl[x]&&!slk[x]&&!chk(x)) return;
         }
     }
-    int solve() {
+    int solve() { // O(n^3)
         fill(fl,fl+n,-1), fill(fr,fr+n,-1), fill(hr,hr+n,0);
         for (int x=0;x<n;++x) hl[x] = *max_element(w[x], w[x] + n);
         for (int x=0;x<n;++x) bfs(x);

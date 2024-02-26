@@ -1,5 +1,5 @@
 /* Better than Dinic without BFS*/
-struct Maxflow {
+struct Maxflow { // O(V^2*E) // O(V^3) if all edge has same weight
   static const int MAXV = 20010;
   static const int INF = 1000000;
   struct Edge {

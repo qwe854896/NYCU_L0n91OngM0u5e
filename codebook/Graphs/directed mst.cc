@@ -5,15 +5,7 @@ struct edge {
   edge() {}
   edge(int a,int b,int c) : u(a), v(b), w(c) {}
 };
-
-/**
- * Computes the minimum spanning tree for a directed graph
- * - edges : Graph description in the form of list of edges.
- *    each edge is: From node u to node v with cost w
- * - root  : Id of the node to start the DMST.
- * - n     : Number of nodes in the graph.
- * */
-
+// Computes the minimum spanning tree for a directed graph
 int dmst(vector<edge> &edges, int root, int n) {
   int ans = 0;
   int cur_nodes = n;

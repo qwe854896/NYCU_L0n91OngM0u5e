@@ -1,54 +1,19 @@
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
-#include <bits/stdc++.h>
  
 using namespace __gnu_pbds;
 using namespace std;
  
-typedef
-tree<
-  pair<int,int>, // set type
-  null_type,
-  less<pair<int,int>>, // set type cmp
-  rb_tree_tag,
-  tree_order_statistics_node_update>
-ordered_set;
+using st = tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update>;
+using mp = tree<ll,        ll, less<ll>, rb_tree_tag, tree_order_statistics_node_update>;
  
 main()
- {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    int n;
-    int sz=0;
-    cin>>n;
-    vector<int> ans(n,0);
- 
-    ordered_set t;
-    int x,y;
-    for(int i=0;i<n;i++)
-    {
-        cin>>x>>y;
-        ans[t.order_of_key({x,++sz})]++;
-        t.insert({x,sz});
-    }
- 
-    for(int i=0;i<n;i++)
-        cout<<ans[i]<<'\n';
+{
+    __gnu_pbds::priority_queue<int> h1, h2; // max heap
+    h1.push(1), h1.push(3), h2.push(2), h2.push(4);
+    h1.join(h2); // h1 = {1, 2, 3, 4}, h2 = {};
+
+    for (int x : {0, 2, 3, 4}) st.insert(x);
+    *st.find_by_order(2); // 3
+    st.order_of_key(1); // 1
 }
-
-/***
-Input
-5
-1 1
-5 1
-7 1
-3 3
-5 5
-
-Output
-1
-2
-1
-1
-0
-***/

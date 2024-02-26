@@ -1,4 +1,4 @@
-void findConvexHull(int n) {
+void findConvexHull(int n) { // O(nlogn)
   sort(v, v + n);
   int u = 0, d = 0;
   for (int i = 0; i < n; ++i) {

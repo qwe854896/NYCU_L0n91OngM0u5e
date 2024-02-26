@@ -1,11 +1,3 @@
-/**
- *  Problems:
- *    http://codeforces.com/problemset/problem/319/C
- *    http://codeforces.com/contest/311/problem/B
- *    https://csacademy.com/contest/archive/task/squared-ends
- *    http://codeforces.com/contest/932/problem/F
- * */
-
 struct line {
   long long m, b;
   line (long long a, long long c) : m(a), b(c) {}

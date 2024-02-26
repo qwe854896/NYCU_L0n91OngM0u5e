@@ -17,7 +17,7 @@ struct Cent_Dec { // 1-base
   num: total number of vertices in tree
   */
   void get_cent(
-    int u, int f, int &mx, int &c, int num) {
+    int u, int f, int &mx, int &c, int num) { // get centroid // O(n)
     int mxsz = 0;
     sz[u] = 1;
     for (pll e : G[u])
@@ -35,7 +35,7 @@ struct Cent_Dec { // 1-base
       if (!done[e.X] && e.X != f)
         dfs(e.X, u, d + e.Y, org);
   }
-  int cut(int u, int f, int num) {
+  int cut(int u, int f, int num) { // cut the tree
     int mx = 1e9, c = 0, lc;
     get_cent(u, f, mx, c, num);
     done[c] = 1, pa[c] = f, layer[c] = layer[f] + 1;
@@ -48,8 +48,8 @@ struct Cent_Dec { // 1-base
       }
     return done[c] = 0, c;
   }
-  void build() { cut(1, 0, n); }
-  void modify(int u) {
+  void build() { cut(1, 0, n); } // build the tree
+  void modify(int u) { // modify the info. of u
     for (int a = u, ly = layer[a]; a;
          a = pa[a], --ly) {
       info[a].X += dis[ly][u], ++info[a].Y;
@@ -57,7 +57,7 @@ struct Cent_Dec { // 1-base
         upinfo[a].X += dis[ly - 1][u], ++upinfo[a].Y;
     }
   }
-  ll query(int u) {
+  ll query(int u) { // query the sum of distance
     ll rt = 0;
     for (int a = u, ly = layer[a]; a;
          a = pa[a], --ly) {

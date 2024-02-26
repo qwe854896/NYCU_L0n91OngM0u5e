@@ -1,7 +1,7 @@
 struct matrix { //m variables, n equations
   int n, m;
   fraction M[MAXN][MAXN + 1], sol[MAXN];
-  int solve() { //-1: inconsistent, >= 0: rank
+  int solve() { //-1: inconsistent, >= 0: rank // O(n^3)
     for (int i = 0; i < n; ++i) {
       int piv = 0;
       while (piv < m && !M[i][piv].n) ++piv;

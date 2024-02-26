@@ -25,7 +25,7 @@ using ll  = long long;
 using vi  = vector <int>;
 using vii = vector <vi>;
 using pii = pair <int, int>;
-using pll = pair <ll , ll >;
+using pll = pair <ll, ll>;
 
 const int MOD = 1000000007;
 const ll INF = 0x7f7f7f7f7f7f7f7f; // 922337203685477580;

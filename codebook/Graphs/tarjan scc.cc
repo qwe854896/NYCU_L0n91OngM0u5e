@@ -1,41 +1,26 @@
-const int MN = 20002;
-struct tarjan_scc {
-  /* scc for each vertex; low; dep; is stk; */
-  int scc[MN], low[MN], d[MN], stacked[MN];
-  int ticks, current_scc; // some id
-  deque<int> s; // used as stack.
-
-  tarjan_scc() {}
-
-  void init () {
-    memset(scc, -1, sizeof scc);
-    memset(d, -1, sizeof d);
-    memset(stacked, 0, sizeof stacked);
-    s.clear();
-    ticks = current_scc = 0;
-  }
-
-  void compute(vector<vector<int> > &g, int u) {
-    d[u] = low[u] = ticks++;
-    s.push_back(u);
-    stacked[u] = true;
-    for (int v : g[i]) {
-      int v = g[u][i];
-      if (d[v] == -1)
-        compute(g, v);
-      if (stacked[v]) {
-        low[u] = min(low[u], low[v]);
-      }
-    }
-
-    if (d[u] == low[u]) { // root
-      int v;
-      do {
-        v = s.back();s.pop_back();
-        stacked[v] = false;
-        scc[v] = current_scc;
-      } while (u != v);
-      current_scc++;
-    }
-  }
+struct SCC { // 0-based // O(V + E)
+	int N, ti = 0;
+	vector<vector<int>> adj;
+	vector<int> disc, comp, st, comps; // comp[i] : which SCC i is in
+	void init(int _N) {
+		N = _N;
+		adj.resize(N), disc.resize(N), comp = vector<int>(N, -1);
+	}
+	void ae(int x, int y) { adj[x].push_back(y); } // add edge
+	int dfs(int x) {
+		int low = disc[x] = ++ti;
+		st.push_back(x);  // disc[y] != 0 -> in stack
+		for (int y : adj[x])
+			if (comp[y] == -1) low = min(low, disc[y] ?: dfs(y));
+		if (low == disc[x]) {  // make new SCC, pop off stack until you find x
+			comps.push_back(x);
+			for (int y = -1; y != x;) comp[y = st.back()] = x, st.pop_back();
+		}
+		return low;
+	}
+	void gen() {
+		for (int i = 0; i < N; i++)
+			if (!disc[i]) dfs(i);
+		reverse(begin(comps), end(comps));
+	}
 };

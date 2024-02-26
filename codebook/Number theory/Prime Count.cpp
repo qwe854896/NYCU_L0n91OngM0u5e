@@ -1,5 +1,4 @@
-// 1 second around 10^12
-int64_t PrimeCount(int64_t n) {
+int64_t PrimeCount(int64_t n) { // O(n^(2/3)) // 1 second around 10^12
   if (n <= 1) return 0;
   const int v = sqrt(n);
   vector<int> smalls(v + 1);

@@ -45,7 +45,7 @@ int dfs(int i, int a) {
     return flow;
 }
  
-int dinic() {
+int dinic() { // O(V^2 * E) // O(E * sqrt(V)) if all edge has same weight
     int cnt = 0;
     while ( bfs() ) {
         CLR(cur, 0);

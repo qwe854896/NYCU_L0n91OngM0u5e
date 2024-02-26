@@ -1,9 +1,9 @@
 // Find max flow with min cost
 // cost comes from every edge
 // c_i per flow
-struct MCMF { // 0-base
-  struct edge {
-    ll from, to, cap, flow, cost, rev;
+struct MCMF { // 0-base // O(F * E^2)
+  struct edge { // store flow at here
+    ll from, to, cap, flow, cost, rev; 
   } * past[MAXN];
   vector<edge> G[MAXN];
   bitset<MAXN> inq;

@@ -1,4 +1,4 @@
-vi g[V]; // 1-index
+vi g[V]; // 1-index // O(n) build, O(logn) query
 int p[V],d[V],sz[V],hs[V];//parent,depth,subtree size,heavy son
 int t,tp[V],in[V],rnk[V];//time,top,dfs num(using in DS),rank
 struct HeavyLineDCP {
@@ -48,7 +48,7 @@ struct HeavyLineDCP {
   void upd(int s, int x) {
     st.upd(1, 1, n, in[s], x); // upd x on in[s]
   }
-  int query(int a, int b) {
+  int query(int a, int b) { // max value from a to b
     int ans = 0;
     while (tp[a] != tp[b]) {
       if (d[tp[a]] < d[tp[b]])

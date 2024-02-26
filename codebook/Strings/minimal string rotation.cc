@@ -1,5 +1,5 @@
 // Lexicographically minimal string rotation
-int lmsr() {
+int lmsr() { // O(n)
   string s;
   cin >> s;
   int n = s.size();

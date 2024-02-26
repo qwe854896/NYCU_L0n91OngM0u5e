@@ -1,5 +1,5 @@
 ll f(ll x,ll mod){ return add(mul(x,x,mod),1,mod); }
-ll pollard_rho(ll n){
+ll pollard_rho(ll n){ // O(n^(1/4)logn) 
   if(!(n&1)) return 2;
   while(1){
     ll y=2,x=rand()%(n-1)+1,res=1;

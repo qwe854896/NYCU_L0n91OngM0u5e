@@ -1,5 +1,6 @@
-struct GenMatch { // 1-base
-  int V, pr[N];
+// Finds a maximum matching in a bipartite graph
+struct GenMatch { // 1-base // O(E * sqrt(V))
+  int V, pr[N]; // pr[i]: match with i
   bool el[N][N], inq[N], inp[N], inb[N];
   int st, ed, nb, bk[N], djs[N], ans;
   void init(int _V) {

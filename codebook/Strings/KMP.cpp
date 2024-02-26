@@ -25,6 +25,6 @@ for(int i=0;i<p.length();i++) {
       j=list[j-1];
     if(p[i]==s[j]) ++j;
     else j = ;
-    if(len-j>s.length()-i-1)break;  //小優化
+    if(len-j>s.length()-i-1)break;  // small optimization
   }
 }

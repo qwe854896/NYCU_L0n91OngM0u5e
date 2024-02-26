@@ -1,4 +1,4 @@
-#ifndef REFERENCE_POINTER
+#ifndef REFERENCE_POINTER // I have no Idea what this is
 #define REFERENCE_POINTER
 template <typename T> struct _RefCounter {
   T data;

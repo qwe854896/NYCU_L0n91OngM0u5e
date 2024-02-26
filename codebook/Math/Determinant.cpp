@@ -6,7 +6,7 @@ T det()
   {
     int mxl=i;
     for(int j=i+1;j<n;++j)
-      if(M[j][i]>M[mxl][i]) mxl=j;
+      if(abs(M[j][i])>abs(M[mxl][i])) mxl=j;
     if(mxl!=i)
       M[i].swap(M[mxl]),x*=-1;
     if(M[i][i] == 0) return 0;

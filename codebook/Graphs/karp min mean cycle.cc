@@ -1,11 +1,3 @@
-/**
- * Finds the min mean cycle, if you need the max mean cycle
- * just add all the edges with negative cost and print
- * ans * -1
- *
- * test: uva, 11090 - Going in Cycle!!
- * */
-
 const int MN = 1000;
 struct edge{
   int v;
@@ -16,7 +8,7 @@ struct edge{
 long long d[MN][MN];
 // This is a copy of g because increments the size
 // pass as reference if this does not matter.
-int karp(vector<vector<edge> > g) {
+int karp(vector<vector<edge>> g) { // Finds the min mean cycle // O(V^3)
   int n = g.size();
 
   g.resize(n + 1); // this is important

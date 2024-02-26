@@ -1,5 +1,5 @@
 /* Find the maximum number of matchings in bipartite */
-int match[V], vis[V], rnd; // 1-index
+int match[V], vis[V], rnd; // 1-index // O(V^3)
 vi g[V];
 bool dfs(int id) {
     vis[id] = rnd;

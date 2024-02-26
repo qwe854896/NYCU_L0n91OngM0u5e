@@ -1,11 +1,6 @@
 char suit[4]={'C','D','H','Y'},ranks[13]={'2','3','4','5','6','7','8','9','T','J','Q','K','A'};
 int rk[256];
-/*
-   for(int i=0;i<13;++i)
-   rk[ranks[i]]=i;
-   for(int i=0;i<4;++i)
-   rk[suit[i]]=i;
-   */
+// for(int i=0;i<13;++i) rk[ranks[i]]=i; for(int i=0;i<4;++i) rk[suit[i]]=i;
 struct cards{
   vector<pii> v;
   int suit_count[4],hands;
@@ -25,9 +20,10 @@ struct cards{
   void ready(){
     int Straight=0,Flush=(*max_element(suit_count,suit_count+4)==5);
     sort(ALL(v),[](ii a,ii b){return a>b;});
-    if(SZ(v)==5&&v[0].Y==v[1].Y+1&&v[1].Y==v[2].Y+1&&v[2].Y==v[3].Y+1&&v[3].Y==v[4].Y+1)
-      Straight=1;
-    else if(SZ(v)==5&&v[0].Y==12&&v[1].Y==3&&v[2].Y==2&&v[3].Y==1&&v[4].Y==0)
+    if(SZ(v)==5&&v[0].Y==v[1].Y+1&&v[1].Y==v[2].Y+1&&
+      v[2].Y==v[3].Y+1&&v[3].Y==v[4].Y+1)Straight=1;
+    else if(SZ(v)==5&&v[0].Y==12&&v[1].Y==3&&
+      v[2].Y==2&&v[3].Y==1&&v[4].Y==0) 
       v[0].Y=3,v[1].Y=2,v[2].Y=1,v[1].Y=0,v[0].Y=-1,Straight=1;
     if(Straight&&Flush) hands=1;
     else if(v[0].X==4) hands=2;

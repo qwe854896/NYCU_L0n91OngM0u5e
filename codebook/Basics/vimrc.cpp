@@ -4,4 +4,6 @@ se re=1 ts=4 sts=4 sw=4 ls=2 mouse=a bg=dark
 syntax on
 hi cursorline cterm=none ctermbg=89
 inoremap {<ENTER> {<ENTER>}<ESC>O
-autocmd filetype cpp nnoremap<F5> :!g++ % -o ./_ && ./_ <ENTER>
+inoremap kj <Esc>
+autocmd filetype cpp nnoremap<F5> :w <ENTER> :!g++ % -o %:r && ./%:r <ENTER>
+autocmd filetype cpp nnoremap<F6> :!./%:r <ENTER>
